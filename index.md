@@ -1,6 +1,6 @@
 # 🧾 eTax Zug Flatpak 🚀
 
-**Production Ready**: This Flatpak package downloads and runs the official eTax Zug app in a sandboxed environment—no more tax-ing installations! For advanced packaging or yearly updates, see `flatpak/README-flatpak-advanced.md`.
+This Flatpak package downloads and runs the official eTax Zug app in a sandboxed environment — no more tax-ing installations!
 
 This repository packages the official eTax Zug Java desktop application as a Flatpak for easy installation and sandboxing on Linux systems. Filing your taxes has never been so… contained! 🥳
 
@@ -29,7 +29,7 @@ sudo dnf install flatpak # Fedora
    flatpak remote-modify --no-gpg-verify etaxzug
    ```
 
-2. **(Optional) Import the GPG key:**
+2. **(Optional — also I still have to do this first 🤣) Import the GPG key:**
 
    Download the key:
    ```
@@ -52,7 +52,7 @@ sudo dnf install flatpak # Fedora
 ## 🔑 Repository Info
 
 - **Repo URL:** https://alexanderadam.github.io/etax_flatpak/repo/
-- **GPG Key:** See above or `.flatpakrepo` file.
+- **GPG Key:** See above or [`.flatpakrepo` file](.flatpakrepo).
 
 
 ### From Repository
@@ -87,20 +87,16 @@ New year, new taxes! To update for a new tax year, just update the Flatpak manif
 
 ## Support & Troubleshooting 🛟
 
-If you encounter issues, please [open an issue on GitHub](https://github.com/alexanderadam/etax_flatpak/issues). For advanced troubleshooting, see `flatpak/README-flatpak-advanced.md`.
+If you encounter issues, please [open an issue on GitHub](https://github.com/alexanderadam/etax_flatpak/issues/new). For advanced troubleshooting, [see `flatpak/README.md`](flatpak/README.md).
 
 ## Repository Structure
 
 - [`flatpak/`](flatpak/) — Contains all Flatpak-specific files:
-    - [`ch.zg.etax.yaml`](flatpak/ch.zg.etax.yaml) — Main Flatpak manifest (YAML format).
-    - [`ch.zg.etax.post-install.sh`](flatpak/ch.zg.etax.post-install.sh) — Post-install script for extracting and patching the app after download.
+    - [`ch.zg.etax.yaml`](flatpak/ch.zg.etax.yaml) — Main Flatpak manifest
+    - [`ch.zg.etax.post-install.sh`](flatpak/ch.zg.etax.post-install.sh) — Post-install script for extracting the app after download.
     - [`etaxzug.sh`](flatpak/etaxzug.sh) — Launcher script for the eTax Zug app inside the Flatpak sandbox.
     - [`README.md`](flatpak/README.md) — Flatpak usage and packaging notes.
-- [`build-dir/`](build-dir/) — Temporary build output directory created by `flatpak-builder`. Not tracked in git.
-    - [`files/`](build-dir/files/) — Contains staged files for the Flatpak build.
-    - [`export/`](build-dir/export/) — Used for exported files during build.
-    - [`metadata`](build-dir/metadata) — Flatpak metadata for the build.
-- [`repo/`](repo/) — OSTree Flatpak repository. This is what gets published to GitHub Pages for user installation.
+- [`repo/`](repo/) — Flatpak repository. This is what gets published to GitHub Pages for user installation.
     - [`config`](repo/config), [`summary`](repo/summary), [`objects/`](repo/objects/), etc. — Standard OSTree repo structure.
 - [`.github/workflows/`](.github/workflows/) — GitHub Actions CI/CD workflows for building and publishing the Flatpak repo.
     - [`flatpak.yml`](.github/workflows/flatpak.yml) — Main workflow for build and deploy.
