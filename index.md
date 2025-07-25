@@ -26,6 +26,7 @@ sudo dnf install flatpak # Fedora
 
    ```sh
    flatpak remote-add --user --if-not-exists etaxzug https://alexanderadam.github.io/etax_flatpak/repo/
+   flatpak remote-modify --no-gpg-verify etaxzug
    ```
 
 2. **(Optional) Import the GPG key:**
