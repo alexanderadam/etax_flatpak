@@ -96,25 +96,17 @@ If you encounter issues, please [open an issue on GitHub](https://github.com/ale
     - [`ch.zg.etax.post-install.sh`](flatpak/ch.zg.etax.post-install.sh) — Post-install script for extracting and patching the app after download.
     - [`etaxzug.sh`](flatpak/etaxzug.sh) — Launcher script for the eTax Zug app inside the Flatpak sandbox.
     - [`README.md`](flatpak/README.md) — Flatpak usage and packaging notes.
-
 - [`build-dir/`](build-dir/) — Temporary build output directory created by `flatpak-builder`. Not tracked in git.
     - [`files/`](build-dir/files/) — Contains staged files for the Flatpak build.
     - [`export/`](build-dir/export/) — Used for exported files during build.
     - [`metadata`](build-dir/metadata) — Flatpak metadata for the build.
-
 - [`repo/`](repo/) — OSTree Flatpak repository. This is what gets published to GitHub Pages for user installation.
     - [`config`](repo/config), [`summary`](repo/summary), [`objects/`](repo/objects/), etc. — Standard OSTree repo structure.
-
 - [`.github/workflows/`](.github/workflows/) — GitHub Actions CI/CD workflows for building and publishing the Flatpak repo.
     - [`flatpak.yml`](.github/workflows/flatpak.yml) — Main workflow for build and deploy.
-
 - [`.flatpakrepo`](.flatpakrepo) — Metadata file for users to add the repo to Flatpak.
-
-- [`build.sh`](build.sh) — Local build and export script for maintainers.
-
-- [`README.md`](README.md) — Main documentation and user instructions.
-- [`CONTRIBUTING.md`](CONTRIBUTING.md) — Contribution guidelines for maintainers.
-- [`.gitignore`](.gitignore) — Excludes build artifacts, temp files, and other unnecessary files from git.
+- [`build.sh`](build.sh) — Local build and export script
+- [`CONTRIBUTING.md`](CONTRIBUTING.md) — Contribution guidelines
 
 Other files and directories may be present for specific releases, tests, or local development. See the README for user instructions and this file for advanced packaging details.
 
