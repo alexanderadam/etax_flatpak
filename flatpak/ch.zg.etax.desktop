@@ -1,0 +1,10 @@
+#!/usr/bin/env xdg-open
+[Desktop Entry]
+Name=eTax Zug
+Comment=Swiss eTax Zug (Java)
+Exec=etaxzug
+Icon=ch.zg.etax
+Type=Application
+Categories=Office;Finance;
+StartupNotify=true
+Terminal=false

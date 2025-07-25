@@ -1,0 +1,5 @@
+[Flatpak Repo]
+Title=etaxzug Flatpak Repository
+Url=https://alexanderadam.github.io/etax_flatpak/repo/
+GPGKey=<BASE64_GPG_KEY>
+Comment=A Flatpak repo for eTax Zug.

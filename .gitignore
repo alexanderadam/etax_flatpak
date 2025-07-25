@@ -1,0 +1,48 @@
+eTaxZGnP*_64bit.zip
+eTaxZGnP*_64bit.sh
+etax_head.sh
+
+# Flatpak build artifacts
+build-dir/
+repo/
+tmp/
+*.zip
+*.sh
+*.desktop
+*.png
+.etaxzug_inst/
+.flatpak-builder/
+
+# Editor/IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# System
+.DS_Store
+Thumbs.db
+
+# Python/Node/Java
+__pycache__/
+node_modules/
+*.pyc
+*.pyo
+*.class
+*.o
+*.a
+*.out
+
+# Logs and temp
+*.log
+*.tmp
+*.bak
+*.orig
+*.rej
+
+# OS-specific
+ehthumbs.db
+Icon?
+
+# Misc
+*~

@@ -1,0 +1,41 @@
+add-extensions:
+  org.freedesktop.Sdk.Extension.openjdk:
+    directory: /app/extensions/org.freedesktop.Sdk.Extension.openjdk
+    version: '24.08.22'
+app-id: ch.zg.etax
+runtime: org.freedesktop.Platform
+runtime-version: '24.08'
+sdk: org.freedesktop.Sdk
+command: etaxzug
+finish-args:
+  - --share=network
+  - --filesystem=home
+  - --device=dri
+  - --socket=x11
+  - --socket=wayland
+modules:
+
+  - name: etaxzug-extra-data
+    buildsystem: simple
+    build-commands:
+      - install -Dm755 etaxzug.sh /app/bin/etaxzug
+      - install -Dm644 ch.zg.etax.desktop /app/share/applications/ch.zg.etax.desktop
+      - install -Dm644 ch.zg.etax.png /app/share/icons/hicolor/256x256/apps/ch.zg.etax.png
+    sources:
+      - type: extra-data
+        url: https://etaxdownload.zg.ch/2024/eTaxZGnP2024_64bit.zip
+        # sha256sum <file> | awk '{print $1}'
+        sha256: bb1554de35b1f934ff8a3d0e352d1337b2369291f603617ff253ec3c7599ad5b
+        # stat --format=%s <file>
+        size: 115853309
+        filename: etax_installer.zip
+      - type: file
+        path: etaxzug.sh
+      - type: file
+        path: ch.zg.etax.desktop
+      - type: file
+        path: ch.zg.etax.png
+version: '2025.1'
+comment: |
+  - 2025 release: Initial release.
+  - See CHANGELOG in README.md for details.
